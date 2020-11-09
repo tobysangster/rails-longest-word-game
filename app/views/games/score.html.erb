@@ -1,37 +1,48 @@
-<h1>Your result</h1>
+<div class="main-flexbox">
+    <div id="main-title">
+        <h1 id="your">
+            YOUR  
+        </h1>
+    </div>
+    <div id="main-title">
+        <h1 id="score">
+            SCORE 
+        </h1>
+    </div>
+</div>
 
 <div class='some-page-wrapper'>
-  <div class='row'>
-    <div class='column'>
-        <div class='row'> 
+  <div class='results'>
+    <div class='column-results'>
+        <div class='results-list'> 
             Your Guess:
         </div>
-        <div class='row'> 
+        <div class='results-list-final'> 
             <%= @attempt%>
         </div>
     </div>
-    <div class='column'>
-        <div class='row'> 
+    <div class='column-results'>
+        <div class='results-list'> 
             Time Taken:
         </div>
-        <div class='row'> 
-            <%= @result[:time]%>
+        <div class='results-list-final'> 
+            <%= @result[:time].round(2)%>
         </div>
     </div>
-    <div class='column'>
-            <div class='row'> 
+    <div class='column-results'>
+            <div class='results-list'> 
             Your Result:
         </div>
-        <div class='row'> 
+        <div class='results-list-final'> 
             <%= @result[:message]%>
         </div>
     </div>
-    <div class='column'>
-        <div class='row'> 
+    <div class='column-results'>
+        <div class='results-list'> 
             Your Score:
         </div>
-        <div class='row'> 
-            <%= @result[:score]%>
+        <div class='results-list-final'> 
+            <%= @result[:score].round(2)%>
         </div>
     </div>
   </div>

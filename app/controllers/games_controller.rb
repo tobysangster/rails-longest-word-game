@@ -46,7 +46,7 @@ class GamesController < ApplicationController
             score = compute_score(attempt, time)
             [score, "Well done, you got it!"]
           else
-            [0, "That is not in the grid"]
+            [0, "That's not in the grid"]
           end
         else
           [0, "That's not a word!"]

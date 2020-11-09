@@ -2,11 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 body {
-    background-color: #EEE2DC;
     font-family: sans-serif;
-    color: #7c7b7b;
-    margin-left: 15pc;
-    margin-right: 15pc;
+    color: #181818;
+    background: linear-gradient(to right, #0C7C59 50%, white 50%)
+
+}
+
+
+#sortable-letters {
+    display: flex;
+    justify-content: space-between;
+    margin-right: -20px;
+    margin-left: -52px;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    color: white;
+    width: 800px;
+    height: 90px;
 }
 
 .centred {
@@ -16,57 +28,83 @@ body {
 
 h1 {
     margin-top: 100px;
-    font-family: sans-serif;
     text-align: center;
+    font-family: 'Kanit', sans-serif;
+    font-size: 50px;
+    color:#0C7C59;
+    
 }
 
 h2 {
     margin-top: 50px;
-    font-family: sans-serif;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #A39A92 ;
+    margin-bottom: 50px;
+    font-size: 30px;
+
 }
 
 h3 {
-    margin-top: 100px;
-    font-family: sans-serif;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #A39A92 ;
+    font-size: 25px;
 }
 
 form {
     font-family: sans-serif;
     }
 
+.wholepage {
+    background-color: #2B4162;
+    width: 680px;
+    height: 680px;
+    margin: 0 auto;
+    text-align: center; 
+    padding: 130px;
+    border-radius: 50pc;
+    padding-top: 70px;
+    margin-top: 300px;
+}
+
+
 .myButton {
-    background-color: #AC3B61;
+    background-color: #A39A92;
     border-radius:16px;
     cursor:pointer;
-    color:#BAB2B5;
-    font-family:sans-serif;
+    color:#ffffff;
+    font-family: 'Kanit', sans-serif;
     font-size:20px;
     font-weight:bold;
-    padding:13px 32px;
+    padding:11px 32px;
     text-decoration:none;
     text-align: center;
     margin: 0 auto;
-    box-shadow: 2px 2px 2px rgba(68, 68, 68, 0.6);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+    border-width: 0;
 
 }
 .myButton:hover {
-    background-color: #913352;
+    background-color: #8a8888;
 }
 
 
 .myInput {
-    background-color:#AC3B61;
+    background-color:#ffffff;
     border-radius:16px;
     cursor:pointer;
-    color:#BAB2B5;
+    color:#0C7C59;
     font-family:sans-serif;
     font-size:20px;
     font-weight:bold;
-    padding:13px 32px;
+    padding:13px ;
     text-decoration:none;
-    box-shadow: 2px 2px 2px rgba(68, 68, 68, 0.6);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+    border-width: 1px;
+    width: 500px;
+    border-style: solid;
+    border-color: rgba(163, 154, 146, 0.3);
 }
     
 
@@ -75,10 +113,9 @@ form {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    color:#BAB2B5;
+    color:#181818;
     justify-content: center;
     align-items: center;
-
   }
   
   .column {
@@ -90,13 +127,98 @@ form {
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
-    margin: 10px;
-    height: 80px;
-    width: 80px;
-    border-radius: 10px;
-    background:  #AC3B61;
-    margin-bottom: 50px;
+    background:  #A39A92;
     box-shadow: 2px 2px 2px rgba(68, 68, 68, 0.6);
+    border-radius: 50%;
+    height: 75px;
+    width: 80px;
+    margin: 2px;
+    }
+
+
+#main-title {
+    font-family: 'Kanit', sans-serif;
+    width: 100pc;
+    height: 60px;
 }
 
+#play {
+    font-size: 150px;
+    color: white;
+    margin-left: 300px;
+}
+
+#now {
+    font-size: 150px;
+    color: #0C7C59;
+    margin-right: 335px;
+}
+
+
+.main-flexbox {
+    display: flex;
+}
+
+#your {
+    font-size: 150px;
+    color: white;
+    margin-left: 230px;
+}
+
+    #score {
+    font-size: 150px;
+    color: #0C7C59;
+    margin-right: 140px;
+    }
+
+    .results {
+    margin-top: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    color:#181818;
+    justify-content: center;
+    align-items: center;
+    }
+
+
+
+    .column-results {
+    font-size: 30px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    background:  #2b4162;
+    box-shadow: 2px 2px 2px rgba(68, 68, 68, 0.6);
+    border-radius: 50%;
+    height: 350px;
+    width: 80px;
+    margin: 2px;
+    }
+
  
+
+    .results-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        color:#181818;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        margin-top: 60px;
+        font-size: 30px;
+        
+        }
+
+    .results-list-final {
+        margin-bottom: 120px;
+        font-size: 30px;
+        color: #a39a92;
+    }

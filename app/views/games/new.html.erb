@@ -1,53 +1,86 @@
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@800&family=Karla&family=Roboto:wght@300&family=Rubik:wght@600&display=swap" rel="stylesheet">  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Draggable + Sortable</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#sortable-letters" ).sortable({
+      revert: true
+    });
+    $( "#draggable" ).draggable({
+      connectToSortable: "#sortable-letters",
+      helper: "clone",
+      revert: "invalid"
+    });
+    $( "ul, li" ).disableSelection();
+  } );
+  </script>
+</head>
 
-<h1>WELCOME TO THE LONGEST WORD GAME</h1>
-<h2>What is the longest word you can create from these letters?</h2>
-<div class='some-page-wrapper'>
-  <div class='row'>
-    <div class='column'>
-        <%= @grid[0] %>
+
+<body>
+<div class="main-flexbox">
+    <div id="main-title">
+        <h1 id="play">
+            PLAY 
+        </h1>
     </div>
-    <div class='column'>
-        <%= @grid[1] %>
+    <div id="main-title">
+        <h1 id="now">
+            NOW 
+        </h1>
     </div>
-    <div class='column'>
-        <%= @grid[2] %>
-    </div>
-    <div class='column'>
-        <%= @grid[3] %>
-    </div>
-    <div class='column'>
-        <%= @grid[4] %>
-    </div>
-    <div class='column'>
-        <%= @grid[5] %>
-    </div>
-    <div class='column'>
-        <%= @grid[6] %>
-    </div>
-    <div class='column'>
-        <%= @grid[7] %>
-    </div>
-    <div class='column'>
-        <%= @grid[8] %>
-    </div>
-    <div class='column'>
-        <%= @grid[9] %>
-    </div>
-  </div>
 </div>
+<div class="wholepage">
+    <h1 id="to-of-circle">WELCOME TO THE LONGEST WORD GAME</h1>
+    <h2>What is the longest word you can create from these letters?</h2>
 
+    <div id="sortable-letters">
+        <div class='column'>
+            <%= @grid[0] %>
+        </div>
+        <div class='column'>
+            <%= @grid[1] %>
+        </div>
+        <div class='column'>
+            <%= @grid[2] %>
+        </div>
+        <div class='column'>
+            <%= @grid[3] %>
+        </div>
+        <div class='column'>
+            <%= @grid[4] %>
+        </div>
+        <div class='column'>
+            <%= @grid[5] %>
+        </div>
+        <div class='column'>
+            <%= @grid[6] %>
+        </div>
+        <div class='column'>
+            <%= @grid[7] %>
+        </div>
+        <div class='column'>
+            <%= @grid[8] %>
+        </div>
+        <div class='column'>
+            <%= @grid[9] %>
+        </div>
+    </div>
 
+    <h3>Feel free to move the letter order around!</h3>
 
-
-
-
-
-
-<div class="centred">
-<form action="<%= result_path %>" method="get" >
-  <input type="text" name="attempt" class="myInput">
-  <input type="hidden" name="grid" value="<%= @grid %>">
-  <input type="hidden" name="start_time" value="<%= @start_time %>">
-  <input type="submit" value="Guess" class="myButton">
-</form>
+    <div class="centred">
+    <form action="<%= result_path %>" method="get" >
+    <input type="text" name="attempt" class="myInput">
+    <input type="hidden" name="grid" value="<%= @grid %>">
+    <input type="hidden" name="start_time" value="<%= @start_time %>">
+    <input type="submit" value="GUESS" class="myButton">
+    </form>
+    </div>
 </div>
+</body>
