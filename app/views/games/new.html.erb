@@ -1,0 +1,53 @@
+
+<h1>WELCOME TO THE LONGEST WORD GAME</h1>
+<h2>What is the longest word you can create from these letters?</h2>
+<div class='some-page-wrapper'>
+  <div class='row'>
+    <div class='column'>
+        <%= @grid[0] %>
+    </div>
+    <div class='column'>
+        <%= @grid[1] %>
+    </div>
+    <div class='column'>
+        <%= @grid[2] %>
+    </div>
+    <div class='column'>
+        <%= @grid[3] %>
+    </div>
+    <div class='column'>
+        <%= @grid[4] %>
+    </div>
+    <div class='column'>
+        <%= @grid[5] %>
+    </div>
+    <div class='column'>
+        <%= @grid[6] %>
+    </div>
+    <div class='column'>
+        <%= @grid[7] %>
+    </div>
+    <div class='column'>
+        <%= @grid[8] %>
+    </div>
+    <div class='column'>
+        <%= @grid[9] %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="centred">
+<form action="<%= result_path %>" method="get" >
+  <input type="text" name="attempt" class="myInput">
+  <input type="hidden" name="grid" value="<%= @grid %>">
+  <input type="hidden" name="start_time" value="<%= @start_time %>">
+  <input type="submit" value="Guess" class="myButton">
+</form>
+</div>

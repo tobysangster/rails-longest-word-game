@@ -1,0 +1,38 @@
+<h1>Your result</h1>
+
+<div class='some-page-wrapper'>
+  <div class='row'>
+    <div class='column'>
+        <div class='row'> 
+            Your Guess:
+        </div>
+        <div class='row'> 
+            <%= @attempt%>
+        </div>
+    </div>
+    <div class='column'>
+        <div class='row'> 
+            Time Taken:
+        </div>
+        <div class='row'> 
+            <%= @result[:time]%>
+        </div>
+    </div>
+    <div class='column'>
+            <div class='row'> 
+            Your Result:
+        </div>
+        <div class='row'> 
+            <%= @result[:message]%>
+        </div>
+    </div>
+    <div class='column'>
+        <div class='row'> 
+            Your Score:
+        </div>
+        <div class='row'> 
+            <%= @result[:score]%>
+        </div>
+    </div>
+  </div>
+</div>
